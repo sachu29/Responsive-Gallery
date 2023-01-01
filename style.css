@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(161, 234, 237);
+    font-size: 26px;
+}
+
+.header {
+    text-align: center;
+    margin: 40px 0;
+}
+/*  Style for normal Four column */
+
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    margin-bottom: 10px;
+}
+.child-wrapper{
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+.child-wrapper img {
+    width: 100%;
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+/* Media Query for Two column */
+
+@media (max-width: 800px) {
+    .child-wrapper {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+    
+/* Media Query for Single column */
+
+@media (max-width: 600px) {
+    .child-wrapper {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
